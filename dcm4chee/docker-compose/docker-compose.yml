@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+   slapd:
+      image: dcm4che/slapd-dcm4chee:2.4.44-10.5
+      expose:
+         - "389"
+      networks:
+         - internal
+   postgres:
+      image: dcm4che/postgres-dcm4chee:9.6-10
+      expose:
+         - "5432"
+      networks:
+         - internal
+   dcm4chee-arc:
+      image: dcm4che/dcm4chee-arc-psql:5.10.5
+      expose:
+         - "8080"
+         - "9990"
+         - "11112"
+         - "2575"
+      links:
+         - slapd:ldap
+         - postgres:db
+      networks:
+         - internal
+networks:
+   internal:
+      driver: bridge

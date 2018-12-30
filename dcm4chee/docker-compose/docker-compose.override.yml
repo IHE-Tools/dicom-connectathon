@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+   slapd:
+      volumes:
+         - ldap-vol:/var/lib/ldap
+         - slapd-vol:/etc/ldap/slapd.d
+      ports:
+         - "389:389"
+   postgres:
+      volumes:
+        - postgres-data-vol:/var/lib/postgresql/data
+      environment:
+         - POSTGRES_DB=pacsdb
+         - POSTGRES_USER=pacs
+         - POSTGRES_PASSWORD=pacs
+      ports:
+         - "15432:5432"
+   dcm4chee-arc:
+      volumes:
+         - wildfly-vol:/opt/wildfly/standalone
+         - dcm4chee-arc-vol:/storage
+      ports:
+         - "9090:8080"
+         - "9990:9990"
+         - "11112:11112"
+         - "2575:2575"
+volumes:
+    ldap-vol:
+    slapd-vol:
+    postgres-data-vol:
+    wildfly-vol:
+    dcm4chee-arc-vol:
+    dcmrs-broker-vol:

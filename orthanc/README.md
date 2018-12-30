@@ -23,7 +23,9 @@ Run these steps from the scripts folder where
 ROOT is the folder you have selected/created above:
 
 > ./postgres_run.sh ROOT
+
 > ./postgres_createdb.sh
+
 When it requests a password, enter 'postgres'
 
 To use a different (more secure) password, you will have to alter the scripts.
@@ -37,6 +39,7 @@ We include an example in the etc folder.
 * Edit the file to match your environment.
 * Copy the file to the location expected by the runtime scripts
 > mkdir -p $ROOT/orthanc/etc
+
 > cp etc/orthanc.json $ROOT/orthanc/etc
 
 ## Start/Stop Containers for Production

@@ -29,5 +29,5 @@ A logs folder will be created and output from the applications
 will be stored in that folder. You may also find useful log
 information in the DCM4CHEE wildfly logs.
 
-## I See a docker-compose file
+## What is the 'docker-compose' folder?
 This is a works in progress.

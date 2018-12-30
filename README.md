@@ -18,6 +18,6 @@ Scripts for DICOM testing at an IHE Connectathon
 ** Use 'store_master.sh' script or individual store scripts to send those
    objects to the DCM4CHEE and Orthanc PACS.
 
-** docker Folder?
-This contains reminders because I have not memorized the docker lingo.
+## docker Folder?
+This folder contains reminders because I have not memorized the docker lingo.
 Please review any script in that folder before you run it.

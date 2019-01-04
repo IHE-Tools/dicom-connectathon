@@ -20,7 +20,7 @@
   "HttpCompressionEnabled" : true,
 
   "DicomServerEnabled" : true,
-  "DicomAet" : "IHE-ORTHANC",
+  "DicomAet" : "IHE_ORTHANC",
   "DicomCheckCalledAet" : false,
   "DicomPort" : 4242,
   "DefaultEncoding" : "Latin1",

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mkdir -p ../logs
-ROOT=/opt/connectathon-2019
+ROOT=/opt/connectathon-2020
 
 echo Starting postgres
 (time ./postgres_run.sh $ROOT) > ../logs/postgres.log 2>&1 &

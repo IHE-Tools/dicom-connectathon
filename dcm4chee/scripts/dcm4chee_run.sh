@@ -46,7 +46,7 @@ confirm_folder $WILDFLY
 
 docker run --name dcm4chee-arc		\
 	--rm				\
-	-p 9090:8080			\
+	-p 8080:8080			\
 	-p 9990:9990			\
 	-p 11112:11112			\
 	-p 2575:2575			\
